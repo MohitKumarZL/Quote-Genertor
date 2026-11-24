@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#f7f3ec" />
+    <title>Quote Generator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;1,600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <header class="topbar">
+        <a class="brand" href="#" aria-label="Quote Generator home">
+          <span class="brand-mark" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M7.7 10.4H4.9c.2-2.8 1.5-5 4-6.5l1.2 2.1c-1.4.9-2.2 2-2.4 3.2h2.1v6.5H7.7v-5.3Zm7.7 0h-2.8c.2-2.8 1.5-5 4-6.5l1.2 2.1c-1.4.9-2.2 2-2.4 3.2h2.1v6.5h-2.1v-5.3Z"/></svg>
+          </span>
+          <span>Quote Generator</span>
+        </a>
+        <button class="icon-button theme-button" id="themeButton" type="button" aria-label="Toggle dark mode" title="Toggle theme">
+          <svg class="sun-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.42 1.42M17.65 17.65l1.42 1.42M2 12h2M20 12h2M4.93 19.07l1.42-1.42M17.65 6.35l1.42-1.42"/></svg>
+        </button>
+      </header>
+
+      <section class="quote-card" aria-live="polite">
+        <div class="quote-accent" aria-hidden="true"></div>
+        <blockquote>
+          <p class="quote-text" id="quoteText"></p>
+          <footer class="quote-author" id="quoteAuthor"></footer>
+        </blockquote>
+      </section>
+
+      <div class="controls">
+        <button class="action-button primary-button" id="newQuoteButton" type="button">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 11a8.1 8.1 0 1 1-2.3-5.7L20 7.6M20 3v4.6h-4.6"/></svg>
+          <span>New Quote</span>
+        </button>
+        <button class="action-button secondary-button" id="copyButton" type="button">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="8" y="8" width="11" height="11" rx="2"/><path d="M16 8V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2"/></svg>
+          <span id="copyLabel">Copy</span>
+        </button>
+      </div>
+
+      <footer class="page-footer">
+        <span>Daily words of wisdom</span>
+        <span class="footer-dot" aria-hidden="true"></span>
+        <span id="quoteCount">No. 1</span>
+      </footer>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
